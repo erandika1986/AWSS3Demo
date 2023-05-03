@@ -28,7 +28,7 @@ namespace UploadAPI.Controllers
             await file.CopyToAsync(memoryStream);
 
             var fileExt = Path.GetExtension(file.FileName);
-            var docName = $"{Guid.NewGuid}.{fileExt}";
+            var docName = $"{Guid.NewGuid().ToString()}{fileExt}";
 
             var s3Obj = new FileObject()
             {

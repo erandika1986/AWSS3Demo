@@ -23,7 +23,7 @@ namespace AWSUtility.Services
 
             var config = new AmazonS3Config()
             {
-                RegionEndpoint = Amazon.RegionEndpoint.EUWest2
+                RegionEndpoint = Amazon.RegionEndpoint.USWest2
             };
 
             var response = new ResponseDto();
@@ -35,7 +35,7 @@ namespace AWSUtility.Services
                     InputStream = obj.InputStream,
                     Key = obj.Name,
                     BucketName = obj.BucketName,
-                    CannedACL = S3CannedACL.NoACL
+                    CannedACL = S3CannedACL.PublicRead
                 };
 
 
